@@ -2,8 +2,8 @@
 
 title: 2025 충청권 사이버보안 경진대회
 description: 2025 충청권 사이버보안 경진대회 홈페이지 (임시 페이지)
-url: "https://ccunictf.co.kr"
-baseurl: "/" # 예: "/my-site" 서브폴더인 경우 "/my-site" 입력
+#url: "https://ccunictf.co.kr"
+#baseurl: "/" # 예: "/my-site" 서브폴더인 경우 "/my-site" 입력
 
 # Build settings
 markdown: kramdown
