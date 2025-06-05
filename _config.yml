@@ -1,0 +1,27 @@
+# _config.yml
+
+title: 2025 충청권 사이버보안 경진대회
+description: 2025 충청권 사이버보안 경진대회 홈페이지 (임시 페이지)
+url: "https://<USERNAME>.github.io/<REPO>"
+baseurl: "" # 예: "/my-site" 서브폴더인 경우 "/my-site" 입력
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# SEO 및 사이트 정보
+author: 보안사업팀
+email: your_email@example.com
+lang: ko
+
+# 사이트 레이아웃/디자인
+header_pages:
+  - index.html
+
+# 기타 설정
+exclude:
+  - Gemfile
+  - Gemfile.lock
