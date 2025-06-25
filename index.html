@@ -2,51 +2,152 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>제3회 2025 충청권 사이버보안 경진대회</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f0f2f5;
+    html, body {
       margin: 0;
       padding: 0;
+      font-family: "Noto Sans KR", sans-serif;
+      background-color: #111;
+      color: #fff;
+      height: 100%;
     }
+
     .container {
-      max-width: 600px;
-      margin: 50px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 0;
     }
-    img {
-      max-width: 100%;
-      border-radius: 8px;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 1.8rem;
     }
-    a.button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #007BFF;
+
+    .media-section {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      align-items: stretch;
+      height: 75vh; /* ✅ PC 기준 높이 */
+    }
+
+    .video-wrapper {
+      flex: 2;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .poster-wrapper {
+      flex: 1;
+      aspect-ratio: 3 / 4;
+      background: #000;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-wrapper video,
+    .poster-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .cta {
+      display: flex;
+      justify-content: center;
+	  gap: 16px;
+      margin-top: 30px;
+    }
+
+    .cta button {
+      background-color: #ff4757;
       color: white;
-      text-decoration: none;
-      border-radius: 4px;
+      padding: 14px 32px;
+      font-size: 1.125rem;
       font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s ease;
     }
-    a.button:hover {
-      background-color: #0056b3;
+
+    .cta button:hover {
+      background-color: #e84118;
+    }
+
+    /* ✅ 모바일 대응 */
+    @media (max-width: 768px) {
+      .media-section {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .video-wrapper,
+      .poster-wrapper {
+        width: 100%;
+        aspect-ratio: unset;  /* ❗ aspect-ratio 제거로 렌더링 오류 방지 */
+        height: auto;
+      }
+
+      .video-wrapper video,
+      .poster-wrapper img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>홈페이지 오픈 준비중</h1>
-    <p>아래 포스터를 확인하시고 참가 신청하세요!</p>
-    <img src="web-final-2.jpg" alt="포스터" />
-    <br />
-    <a href="https://walla.my/v/eJMh4z4sGLnEXAGkUCrN" class="button" target="_blank">참가 신청하기</a>
-    <a href="https://m.site.naver.com/1Jurd" class="button" target="_blank">오픈채팅 참가하기</a>
+    <h1>제3회 2025 충청권 사이버보안 경진대회</h1>
+
+    <div class="media-section">
+      <!-- 🎥 영상 -->
+      <div class="video-wrapper">
+        <video
+          poster="play.png"
+          preload="metadata"
+          muted
+          playsinline
+          controls
+        >
+          <source src="video.mp4" type="video/mp4" />
+          브라우저가 HTML5 비디오를 지원하지 않습니다.
+        </video>
+      </div>
+
+      <!-- 🖼️ 포스터 -->
+      <div class="poster-wrapper">
+        <img src="poster.jpg" alt="대회 포스터" />
+      </div>
+    </div>
+
+    <!-- 🔘 참가 신청 버튼 -->
+	<div class="cta">
+  <button onclick="window.open('https://walla.my/v/eJMh4z4sGLnEXAGkUCrN', '_blank')">
+    참가 신청하기
+  </button>
+
+  <button onclick="window.open('https://m.site.naver.com/1Jurd', '_blank')">
+    오픈채팅 참가하기
+  </button>
+</div>
+
   </div>
 </body>
 </html>
+
